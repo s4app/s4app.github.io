@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <style>
+    button {
+      padding: 30px;
+      margin: 10px;
+    }
+  </style>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+  </script>
+  <body>
+
+    <button value="10">Corte +10</button>
+    <button value="50">+50</button>
+    <button value="15">+15</button>
+    <button value="100"> Escova +100</button>
+    <button value="150">+105</button>
+
+    <input type="number" value="0">
+
+    <script>
+      $('button').click(function () {
+        window.navigator.vibrate(60);
+        const total = $('input');
+        total.val(Number(total.val()) + Number($(this).attr('value')));
+      });
+    </script>
+  </body>
+</html>
